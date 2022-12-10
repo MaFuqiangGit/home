@@ -1,15 +1,15 @@
 {
-    "short_name": "马富强学编程",
-    "name": "马富强",
-    "lang": "zh-CN",
-    "description": "马富强的个人网站，从零开始学编程。",
-    "start_url": "/",
-    "id": "/",
-    "background_color": "#ffffff",
-    "theme_color": "#76d8ff",
-    "dir": "auto",
-    "display": "standalone",
-    "icons": [
+  "short_name": "马富强",
+  "name": "马富强",
+  "lang": "zh-CN",
+  "description": "马富强的个人网站，从零开始学编程。",
+  "start_url": "https://cpdm.wang/",
+  "id": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#76d8ff",
+  "dir": "auto",
+  "display": "standalone",
+  "icons": [
     {
       "src": "/apple-touch-icon.png",
       "type": "image/png",
