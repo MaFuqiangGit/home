@@ -75,3 +75,7 @@
     "Microsoft YaHei UI", "Microsoft YaHei", "Roboto Mono", monospace, Arial,
     sans-serif;
 }
+
+code {
+  font-size: 14px;
+}
