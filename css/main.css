@@ -1,35 +1,55 @@
 @media (prefers-color-scheme: dark) {
+  body {
+    background-color: #171717;
 
-    body {
+    color: #e3e3e3;
+  }
 
-        background-color: #121212;
+  div {
+    border-color: #353535;
+  }
 
-        color: #e3e3e3;
-
-    }
-
-    div {
-
-        border-color: #353535;
-
-    }
-
+  .dingbu {
+    background-color: #1f1f1f;
+    text-align: center;
+    padding: 40px;
+  }
+  .dibu {
+    background-color: #1f1f1f;
+    text-align: center;
+    padding: 40px;
+    font-size: 12px;
+  }
 }
 
 @media (prefers-color-scheme: light) {
+  body {
+    background-color: #ffffff;
 
-    body {
+    color: #333333;
+  }
 
-        background-color: #F1F1F1;
+  div {
+    border-color: #a1a1a1;
+  }
 
-        color: #333333;
+  .dingbu {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 40px;
+  }
+  .dibu {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 40px;
+    font-size: 12px;
+  }
+}
+.huizi {
+  color: #666;
+}
 
-    }
-
-    div {
-
-        border-color: #a1a1a1;
-
-    }
-
+.jzdq {
+  max-width: 700px;
+  margin: 0px auto;
 }
