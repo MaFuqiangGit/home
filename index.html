@@ -27,20 +27,11 @@
   <meta name="theme-color" content="#ffffff" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="white" />
-  <meta name="apple-mobile-web-app-title" content="马富强" />
+  <meta name="apple-mobile-web-app-title" content="学习编程" />
   <link rel="stylesheet" type="text/css" href="./css/main.css" />
   <link rel="stylesheet" type="text/css" href="./css/vs2015.min.css" />
   <script src="./js/highlight.min.js"></script>
-  <script>
-    hljs.initHighlightingOnLoad();
-  </script>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Helvetica Neue", "PingFang SC", "Source Han Sans",
-        "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif;
-    }
-  </style>
+  <script src="./js/main.js"></script>
   <script>
     var _hmt = _hmt || [];
 
@@ -73,18 +64,19 @@
         text-size-adjust: 100%;
         text-align: center;
       ">
-    <p>您好，这里是<b>马富强</b>🇨🇳</p>
+    <p>您好，这里是我的学习编程的记录</p>
     <p style="background-color: #dddfff; font-size: 25px; color: #ffffff">
-      学习编程的记录😁
-    </p>
+      1234567abcdefABCDEF</p>
   </div>
 
-  <div class="jzdq" ">
+  <div class="jzdq">
     <b class=" huizi">代码显示</b>
   </div>
-  <div class="jzdq" ">
-    <pre> <code><xmp><h1>Hello world</h1>
-<p>你好世界</p></xmp></code></pre>
+  <div id="code">
+    <pre id="code-box"><code><xmp><h1>Hello world</h1>
+<p>你好世界</p>
+<script src="./js/highlight.min.js"></script></xmp></code></pre>
+
   </div>
 
   <div class=" dibu">
@@ -99,11 +91,18 @@
     <a class="huizi" href="https://www.midorg.com/h.html" target="_blank" rel="noopener noreferrer">
       在线HTML工具
     </a>
-    <p class="huizi">Copyright © 马富强 2023</p>
+    <p class="huizi">Copyright © 2022-2023 <a class="huizi" href="https://cpdm.wang">cpdm.wang</a></p>
     <a class="huizi" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">
       这里没有备案号
     </a>
   </div>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("sw.js");
+      });
+    }
+  </script>
 </body>
 
 </html>

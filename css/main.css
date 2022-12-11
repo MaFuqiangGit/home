@@ -3,6 +3,7 @@
     background-color: #171717;
 
     color: #e3e3e3;
+    margin: 0;
   }
 
   div {
@@ -27,6 +28,7 @@
     background-color: #ffffff;
 
     color: #333333;
+    margin: 0;
   }
 
   div {
@@ -52,4 +54,24 @@
 .jzdq {
   max-width: 700px;
   margin: 0px auto;
+  padding: 0px 10px;
+}
+
+#code-box {
+  background-color: #1E1E1E;
+  padding: 5px;
+  border-radius: 15px;
+  display: flex;
+  margin: unset;
+}
+
+#code {
+  max-width: 700px;
+  margin: 0px auto;
+  padding: 0px 10px;
+}
+* {
+  font-family: "Helvetica Neue", "PingFang SC", "Source Han Sans",
+    "Microsoft YaHei UI", "Microsoft YaHei", "Roboto Mono", monospace, Arial,
+    sans-serif;
 }
