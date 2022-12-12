@@ -112,3 +112,7 @@ nav {
   padding-top: 15px;
   padding-bottom: unset;
 }
+
+h6 {
+  margin-top: unset;
+}
