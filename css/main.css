@@ -107,3 +107,8 @@ code {
   font-size: 12px;
   
 }
+
+nav {
+  padding-top: 10px;
+  padding-bottom: none;
+}
