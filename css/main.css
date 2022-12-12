@@ -46,10 +46,11 @@
     text-align: center;
     padding: 40px;
     font-size: 12px;
-    a{
-      text-decoration: none;
-    }
-    
+
+ 
+  }
+  footer a{
+    text-decoration: none;
   }
 }
 .huizi {
