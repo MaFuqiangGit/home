@@ -15,6 +15,7 @@
 
 
   }
+
   footer {
     background-color: #1f1f1f;
 
@@ -43,6 +44,7 @@
 
 
   }
+
   footer {
     background-color: #f1f1f1;
 
@@ -50,30 +52,34 @@
 
   }
 
-    
 
 
-  
+
+
 }
 
-header{
+header {
   text-align: center;
   padding: 40px 40px 10px 40px;
 }
+
 footer {
   text-align: center;
   padding: 40px;
   font-size: 12px;
   color: #666;
 }
-footer a{
+
+footer a {
   color: #666;
   border-bottom: 1px dashed;
 }
-a{
+
+a {
   color: #006699;
   text-decoration: none;
 }
+
 .huizi {
   color: #666;
 }
@@ -97,6 +103,7 @@ a{
   margin: 0px auto;
   padding: 0px 10px;
 }
+
 * {
   font-family: "Helvetica Neue", "PingFang SC", "Source Han Sans",
     "Microsoft YaHei UI", "Microsoft YaHei", "Roboto Mono", monospace, Arial,
@@ -105,7 +112,7 @@ a{
 
 code {
   font-size: 12px;
-  
+
 }
 
 nav {
