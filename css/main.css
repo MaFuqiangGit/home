@@ -17,16 +17,13 @@
   }
   footer {
     background-color: #1f1f1f;
-    text-align: center;
-    padding: 40px;
-    font-size: 12px;
-    color: #666;
-  }
-  footer a {
-    color: #666;
-    text-decoration: none;
 
   }
+
+
+
+
+
 }
 
 @media (prefers-color-scheme: light) {
@@ -48,17 +45,25 @@
   }
   footer {
     background-color: #f1f1f1;
-    text-align: center;
-    padding: 40px;
-    font-size: 12px;
-    color: #666;
- 
+
+
+
   }
-  footer a{
+
     
-    color: #666;
-  }
+
+
   
+}
+footer {
+  text-align: center;
+  padding: 40px;
+  font-weight: 12px;
+  color: #666;
+}
+footer a{
+  color: #666;
+  border-bottom: 1px dashed;
 }
 a{
   color: #006699;
