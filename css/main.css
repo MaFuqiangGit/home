@@ -109,8 +109,8 @@ code {
 }
 
 nav {
-  padding-top: 15px;
-  padding-bottom: unset;
+  padding-top: 20px;
+
 }
 
 h6 {
@@ -118,5 +118,6 @@ h6 {
 }
 
 h2 {
+  margin-top: 15px;
   margin-bottom: unset;
 }
