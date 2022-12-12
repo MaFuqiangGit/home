@@ -116,3 +116,7 @@ nav {
 h6 {
   margin-top: unset;
 }
+
+h2 {
+  margin-bottom: unset;
+}
