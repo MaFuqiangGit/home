@@ -22,7 +22,7 @@
   }
 
   table {
-    background-color: #333333 ;
+    background-color: #333333;
   }
 
 
@@ -65,7 +65,8 @@
 header {
   text-align: center;
   padding: 40px 40px 10px 40px;
-  margin-bottom: 5px;
+  max-width: 900px;
+  margin: 0px auto 10px auto;
 }
 
 footer {
@@ -73,7 +74,8 @@ footer {
   padding: 40px;
   font-size: 12px;
   color: #666;
-  margin-top: 5px;
+  max-width: 900px;
+  margin-top: 10px auto 0px auto;
 }
 
 footer a {
