@@ -55,10 +55,14 @@
  
   }
   footer a{
-    text-decoration: none;
+    
     color: #666;
   }
   
+}
+a{
+  color: #006699;
+  text-decoration: none;
 }
 .huizi {
   color: #666;
