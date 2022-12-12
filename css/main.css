@@ -109,6 +109,6 @@ code {
 }
 
 nav {
-  padding-top: 10px;
-  padding-bottom: none;
+  padding-top: 15px;
+  padding-bottom: unset;
 }
