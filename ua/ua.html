@@ -1,178 +1,152 @@
 <!DOCTYPE html>
 <html lang="zh_CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="浏览器内核版本ua检测" />
-    <meta name="keywords" content="浏览器内核版本ua检测" />
-    <meta name="copyright" content="浏览器内核版本ua检测" />
-    <meta name="author" content="浏览器内核版本ua检测" />
-    <meta name="reply-to" content="superq520@foxmail.com" />
-    <meta name="robots" content="all" />
-    <meta property="og:image" content="../img/logo.png" />
-    <meta name="og:title" content="浏览器内核版本ua检测" />
-    <meta name="og:url" content="https://cpdm.wang/ua/ua.html" />
-    <meta name="og:description" content="浏览器内核版本ua检测" />
-    <meta name="baidu-site-verification" content="code-kqPK1hiJyC" />
-    <meta
-      name="360-site-verification"
-      content="66ef038656fcaafd0c30a895a20a60f4"
-    />
-    <meta name="msvalidate.01" content="9F0AD8F2101B178EDCD65AA67D316DC0" />
 
-    <meta name="bytedance-verification-code" content="tK3lwY/lmKJncwKqBLmg" />
-    <!-- config -->
-    <link rel="manifest" href="../js/manifestua.json" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="../img/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="../img/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="../img/favicon-16x16.png"
-    />
-    <link rel="icon" href="../img/favicon.ico" />
-    <link rel="mask-icon" href="../img/mask-icon.svg" color="#f1f1f1" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="#ffffff" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
-    <meta name="apple-mobile-web-app-title" content="浏览器内核检测" />
-    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="浏览器内核版本ua检测" />
+  <meta name="keywords" content="浏览器内核版本ua检测" />
+  <meta name="copyright" content="浏览器内核版本ua检测" />
+  <meta name="author" content="浏览器内核版本ua检测" />
+  <meta name="reply-to" content="superq520@foxmail.com" />
+  <meta name="robots" content="all" />
+  <meta property="og:image" content="../img/logo.png" />
+  <meta name="og:title" content="浏览器内核版本ua检测" />
+  <meta name="og:url" content="https://cpdm.wang/ua/ua.html" />
+  <meta name="og:description" content="浏览器内核版本ua检测" />
+  <meta name="baidu-site-verification" content="code-kqPK1hiJyC" />
+  <meta name="360-site-verification" content="66ef038656fcaafd0c30a895a20a60f4" />
+  <meta name="msvalidate.01" content="9F0AD8F2101B178EDCD65AA67D316DC0" />
+  <meta name="bytedance-verification-code" content="tK3lwY/lmKJncwKqBLmg" />
+  <!-- config -->
+  <link rel="manifest" href="../js/manifestua.json" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png" />
+  <link rel="icon" href="../img/favicon.ico" />
+  <link rel="mask-icon" href="../img/mask-icon.svg" color="#f1f1f1" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+  <meta name="apple-mobile-web-app-title" content="浏览器内核检测" />
+  <link rel="stylesheet" type="text/css" href="../css/main.css" />
+  <script type="text/javascript" src="ua.js"></script>
+  <title>浏览器内核检测</title>
+  <style type="text/css"></style>
+  <script type="text/javascript">
+    function init() {
+      var dev = document.getElementById("dev"),
+        who = document.getElementById("who"),
+        what = document.getElementById("what");
 
-    <title>浏览器内核检测</title>
-    <style type="text/css"></style>
-    <script type="text/javascript">
-      function init() {
-        var dev = document.getElementById("dev"),
-          who = document.getElementById("who"),
-          what = document.getElementById("what");
+      if (UA) {
+        if (who) {
+          who.innerHTML = UA.whoami();
+        }
 
-        if (UA) {
-          if (who) {
-            who.innerHTML = UA.whoami();
+        if (dev) {
+          if (UA.isMobile()) {
+            dev.innerHTML = "手机📱";
+          } else if (UA.isTablet()) {
+            dev.innerHTML = "平板";
+          } else if (UA.isTV()) {
+            dev.innerHTML = "电视📺";
+          } else {
+            dev.innerHTML = "电脑🖥️";
           }
-
-          if (dev) {
-            if (UA.isMobile()) {
-              dev.innerHTML = "手机📱";
-            } else if (UA.isTablet()) {
-              dev.innerHTML = "平板";
-            } else if (UA.isTV()) {
-              dev.innerHTML = "电视📺";
-            } else {
-              dev.innerHTML = "电脑🖥️";
-            }
-          }
-
-          if (what) {
-            if (UA.isChrome()) {
-              what.innerHTML = "Chrome或者Chrome内核";
-            } else if (UA.isIE()) {
-              what.innerHTML = "ie浏览器";
-            } else if (UA.isFirefox()) {
-              what.innerHTML = "Firefox火狐";
-            } else if (UA.isGecko()) {
-              what.innerHTML = "Firefox内核";
-            } else if (UA.isOpera()) {
-              what.innerHTML = "Opera";
-              /*} else if (UA.isIE()) {
-                            what.innerHTML = "Internet Explorer";*/
-            } else if (UA.isSafari()) {
-              what.innerHTML = "Safari";
-            } else if (UA.isWebKit()) {
-              what.innerHTML = "WebKit";
-            }
+        }
+  
+        if (what) {
+          if (UA.isChrome()) {
+            what.innerHTML = "Chrome或者Chrome内核";
+          } else if (UA.isIE()) {
+            what.innerHTML = "ie浏览器";
+          } else if (UA.isFirefox()) {
+            what.innerHTML = "Firefox火狐";
+          } else if (UA.isGecko()) {
+            what.innerHTML = "Firefox内核";
+          } else if (UA.isOpera()) {
+            what.innerHTML = "Opera";
+            /*} else if (UA.isIE()) {
+                          what.innerHTML = "Internet Explorer";*/
+          } else if (UA.isSafari()) {
+            what.innerHTML = "Safari";
+          } else if (UA.isWebKit()) {
+            what.innerHTML = "WebKit";
           }
         }
       }
+    }
 
-      if (window.attachEvent) {
-        document.onreadystatechange = init;
-      } else if (window.addEventListener) {
-        document.addEventListener("DOMContentLoaded", init, false);
-      }
-    </script>
-  </head>
-  <body>
-    <header>
-      <h2>浏览器内核检测</h2>
-      <h6>Browser kernel detection</h6>
-      <nav>
-        <a href="../index.html">首页</a>
-        <a href="ua.html">浏览器内核检测</a>
-      </nav>
-    </header>
+    if (window.attachEvent) {
+      document.onreadystatechange = init;
+    } else if (window.addEventListener) {
+      document.addEventListener("DOMContentLoaded", init, false);
+    }
+  </script>
+</head>
 
-    <table
-      width="100%"
-      border="0"
-      cellspacing="0"
-      cellpadding="0"
-      class="jzdq"
-      style="text-shadow: 0 1px 0 #ddd; line-height: 1.5; border-radius: 15px; "
-    >
-      <thead>
-        <tr>
-          <th></th>
-          <th></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td width="25%" align="right">设备</td>
-          <td>
-            <span id="dev"></span>
-          </td>
-        </tr>
-        <tr>
-          <td width="25%" align="right">浏览器</td>
-          <td>
-            <span id="what"></span>
-          </td>
-        </tr>
-        <tr>
-          <td align="right">系统</td>
-          <td>未知系统</td>
-        </tr>
-        <tr>
-          <td align="right">完整ua</td>
-          <td>
-            <span style="font-size: 12px;" id="who"></span>
-          </td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td align="right">ip地址</td>
-          <td>*.*.*.*</td>
-        </tr>
-      </tfoot>
-    </table>
-
-    <script type="text/javascript" src="ua.js"></script>
-    <footer>
+<body>
+  <header>
+    <h2>浏览器内核检测</h2>
+    <h6>Browser kernel detection</h6>
+    <nav>
       <a href="../index.html">首页</a>
       <a href="ua.html">浏览器内核检测</a>
+    </nav>
+  </header>
 
-      <p>Copyright © 2022-2023 <a href="https://cpdm.wang">cpdm.wang</a></p>
-      <a
-        href="https://beian.miit.gov.cn/"
-        target="_blank"
-        rel="noopener  noreferrer"
-      >
-        这里没有备案号
-      </a>
-    </footer>
-  </body>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="jzdq"
+    style="text-shadow: 0 1px 0 #ddd; line-height: 1.5; border-radius: 15px; ">
+    <thead>
+      <tr>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td width="25%" align="right">设备</td>
+        <td>
+          <span id="dev"></span>
+        </td>
+      </tr>
+      <tr>
+        <td width="25%" align="right">浏览器</td>
+        <td>
+          <span id="what"></span>
+        </td>
+      </tr>
+      <tr>
+        <td align="right">系统</td>
+        <td>未知系统</td>
+      </tr>
+      <tr>
+        <td align="right">完整ua</td>
+        <td>
+          <span style="font-size: 12px;" id="who"></span>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td align="right">ip地址</td>
+        <td>*.*.*.*</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <footer>
+    <a href="../index.html">首页</a>
+    <a href="ua.html">浏览器内核检测</a>
+
+    <p>Copyright © 2022-2023 <a href="https://cpdm.wang">cpdm.wang</a></p>
+    <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener  noreferrer">
+      这里没有备案号
+    </a>
+  </footer>
+</body>
+
 </html>
