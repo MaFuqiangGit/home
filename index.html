@@ -100,6 +100,14 @@
       这里没有备案号
     </a>
   </footer>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("./js/ws.js");
+      });
+    }
+  </script>
+
 </body>
 
 </html>
