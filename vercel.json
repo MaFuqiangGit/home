@@ -1,0 +1,15 @@
+{
+
+  "rewrites": [
+
+    {
+
+      "source": "/api/:match*",
+
+      "destination": "https://vercel.com/mfq/music/:match*"
+
+    }
+
+  ]
+
+}
