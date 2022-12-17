@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹性盒子flex</title>
+    <style>
+        body {
+            margin: 0px;
+            height: 100vh;
+            background-color: #eee;
+        }
+
+        .yinying {
+            box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px, rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+        }
+
+        /* * {
+            border: 2px solid black;
+        }**/
+
+        .flex {
+            display: flex;
+        }
+
+        .baise {
+            background-color: white;
+        }
+
+        .flex1 {
+            flex: 1
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .bj8 {
+            margin: 8px;
+        }
+
+        .zbj8 {
+            margin-left: 8px;
+        }
+
+        .ybj8 {
+            margin-right: 8px;
+        }
+
+        .sbj8 {
+            margin-top: 8px;
+        }
+
+        .daohang {
+            padding: 10px 20px;
+            border-bottom: 1px solid #999;
+            font-size: 15px;
+            color: #666;
+        }
+
+        /*当屏幕小于600px是生效*/
+        @media(max-width:600px) {
+            .cebian {
+                display: none;
+            }
+
+            .shuxiang {
+                flex-direction: column;
+            }
+
+            .mzbj8 {
+                margin-left: 8px;
+            }
+
+            .shuju {
+                margin: 0 0 8px;
+                flex: auto;
+            }
+        }
+
+        .qgdt::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="flex">
+    <!--侧边栏-->
+    <div style="width: 200px;z-index: 2;" class="cebian yinying baise">
+        <!--左区头像-->
+        <div class="flex" style="padding: 5px ;
+align-items: center;justify-content: center;border-bottom: 1px solid #999;
+        ">
+            <img src="./img/logo.png" width="50px" height="50px" alt="">
+            <div class="zbj8">cpdm.wang</div>
+        </div>
+        <!--导航区-->
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+        <div class="daohang">导航</div>
+    </div>
+    <!--主区域-->
+    <div class="flex1 flex column">
+        <!--头部栏-->
+        <div style="height: 60px; z-index: 1;" class="yinying baise"></div>
+        <!--内容区-->
+        <div style="overflow:auto ;" class="flex1 flex shuxiang qgdt">
+            <!--左区-->
+            <div style="flex:3" class="flex column bj8">
+                <!--数据区域区-->
+                <div class="flex shuxiang">
+                    <!--数据区-->
+                    <div style="height:100px" class="flex1 shuju yinying baise"></div>
+                    <!--数据区-->
+                    <div style="height:100px" class="flex1 shuju zbj8 yinying baise"></div>
+                    <!--数据区-->
+                    <div style="height:100px" class="flex1 shuju zbj8 yinying baise"></div>
+                    <!--数据区-->
+                    <div style="height:100px" class="flex1 shuju zbj8 yinying baise"></div>
+
+                </div>
+                <!--列表区域-->
+                <div class="flex column">
+                    <!--列表项-->
+                    <div style="height:160px" class="yinying baise sbj8"></div>
+                    <!--列表项-->
+                    <div style="height:160px" class="yinying baise sbj8"></div>
+                    <!--列表项-->
+                    <div style="height:160px" class="yinying baise sbj8"></div>
+                    <!--列表项-->
+                    <div style="height:160px" class="yinying baise sbj8"></div>
+                    <!--列表项-->
+                    <div style="height:160px" class="yinying baise sbj8"></div>
+                    <!--列表项-->
+                    <div style="height:160px" class="yinying baise sbj8"></div>
+                    <!--列表项-->
+                    <div style="height:160px" class="yinying baise sbj8"></div>
+                    <!--列表项-->
+                    <div style="height:160px" class="yinying baise sbj8"></div>
+                    <!--列表项-->
+                    <div style="height:160px" class="yinying baise sbj8"></div>
+
+                </div>
+            </div>
+            <!--右区-->
+            <div style="flex: 1;" class="flex ybj8 sbj8 mzbj8 column">
+                <!--提示区域-->
+                <div style="height:150px" class="yinying baise"></div>
+                <!--左消息区域-->
+                <div style="height:300px" class="yinying baise sbj8"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
