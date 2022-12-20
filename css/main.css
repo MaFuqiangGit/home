@@ -1,53 +1,66 @@
+* {
+  font-family: "Helvetica Neue", "PingFang SC", "Source Han Sans",
+    "Microsoft YaHei UI", "Microsoft YaHei", "Roboto Mono", monospace, Arial,
+    sans-serif;
+}
+
+
 @media (prefers-color-scheme: light) {
   body {
-    background: linear-gradient(
-      45deg,
-      #feac5e 0,
-      #feac5e 16.66%,
-      #1cbbb4 16.66%,
-      #1cbbb4 33.33%,
-      #39b54a 33.33%,
-      #39b54a 50%,
-      #feac5e 50%,
-      #feac5e 66.66%,
-      #1cbbb4 66.66%,
-      #1cbbb4 83.33%,
-      #39b54a 83.33%,
-      #39b54a 50%
-    );
+    background: linear-gradient(45deg,
+        #feac5e 0,
+        #feac5e 16.66%,
+        #1cbbb4 16.66%,
+        #1cbbb4 33.33%,
+        #39b54a 33.33%,
+        #39b54a 50%,
+        #feac5e 50%,
+        #feac5e 66.66%,
+        #1cbbb4 66.66%,
+        #1cbbb4 83.33%,
+        #39b54a 83.33%,
+        #39b54a 50%);
+    color: #202b20;
   }
+
   .baise {
     background-color: #f3feff;
   }
+
   .touming {
     background-color: #ffffffa6;
   }
+
 }
+
 @media (prefers-color-scheme: dark) {
   body {
-    background: linear-gradient(
-      45deg,
-      #cd8c50 0,
-      #cd8c50 16.66%,
-      #0e5c58 16.66%,
-      #0e5c58 33.33%,
-      #267731 33.33%,
-      #267731 50%,
-      #cd8c50 50%,
-      #cd8c50 66.66%,
-      #0e5c58 66.66%,
-      #0e5c58 83.33%,
-      #267731 83.33%,
-      #267731 50%
-    );
+    background: linear-gradient(45deg,
+        #cd8c50 0,
+        #cd8c50 16.66%,
+        #0e5c58 16.66%,
+        #0e5c58 33.33%,
+        #267731 33.33%,
+        #267731 50%,
+        #cd8c50 50%,
+        #cd8c50 66.66%,
+        #0e5c58 66.66%,
+        #0e5c58 83.33%,
+        #267731 83.33%,
+        #267731 50%);
+
+    color: #999;
   }
+
   .baise {
     background-color: #202b20;
   }
+
   .touming {
     background-color: #000000a6;
   }
 }
+
 body {
   margin: 0px;
   background-size: 800px 800px;
@@ -117,8 +130,8 @@ a {
 }
 
 .daohang {
-  padding: 10px 20px;
-  border-bottom: 1px solid #999;
+
+  line-height: 2;
   font-size: 15px;
   color: #666;
 }
@@ -146,6 +159,7 @@ a {
 .yuanjiao {
   border-radius: 15px;
 }
+
 /*当屏幕小于600px是生效*/
 @media (max-width: 600px) {
   .cebian {
