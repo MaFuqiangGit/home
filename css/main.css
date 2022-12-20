@@ -1,72 +1,54 @@
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #171717;
-
-    color: #e3e3e3;
-  }
-
-  div {
-    border-color: #353535;
-  }
-
-  header {
-    background-color: #1f1f1f;
-  }
-
-  footer {
-    background-color: #1f1f1f;
-  }
-
-  table {
-    background-color: #333333;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  body {
-    background-color: #ffffff;
-
-    color: #333333;
-  }
-
-  div {
-    border-color: #a1a1a1;
-  }
-
-  header {
-    background-color: #f1f1f1;
-  }
-
-  footer {
-    background-color: #f1f1f1;
-  }
-
-  table {
-    background-color: #e3e3e3;
-  }
-}
-
 body {
   margin: 0px;
-  min-height: 100vh;
+  background: linear-gradient(
+    45deg,
+    #feac5e 0,
+    #feac5e 16.66%,
+    #1cbbb4 16.66%,
+    #1cbbb4 33.33%,
+    #39b54a 33.33%,
+    #39b54a 50%,
+    #feac5e 50%,
+    #feac5e 66.66%,
+    #1cbbb4 66.66%,
+    #1cbbb4 83.33%,
+    #39b54a 83.33%,
+    #39b54a 50%
+  );
+  background-size: 800px 800px;
 }
 
 header {
-  text-align: center;
-  padding: 40px 40px 10px 40px;
-  max-width: 900px;
-  margin: 0px auto 10px auto;
-  border-radius: 0px 0px 15px 15px;
+  background-color: rgba(255, 255, 255, 0.65);
+  height: 60px;
+  position: fixed;
+  top: 4px;
+  right: 0px;
+  left: 0px;
+  z-index: 2;
+  margin-right: 8px;
+  margin-left: 8px;
+  backdrop-filter: blur(15px);
 }
 
 footer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.banquan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding: 40px;
   font-size: 12px;
   color: #666;
-  max-width: 900px;
-  margin: 10px auto 0px auto;
-  border-radius: 15px 15px 0px 0px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  padding: 15px 5px 10px 5px;
+  border-radius: 15px;
 }
 
 footer a {
@@ -79,56 +61,91 @@ a {
   text-decoration: none;
 }
 
-.huizi {
+.flex {
+  display: flex;
+}
+
+.yinying {
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+    rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+}
+
+.baise {
+  background-color: white;
+}
+
+.flex1 {
+  flex: 1;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.daohang {
+  padding: 10px 20px;
+  border-bottom: 1px solid #999;
+  font-size: 15px;
   color: #666;
 }
 
-.jzdq {
-  max-width: 700px;
-  margin: 0px auto;
-  padding: 0px 10px;
+/*当屏幕小于600px是生效*/
+@media (max-width: 600px) {
+  .cebian {
+    display: none;
+  }
+
+  .mzbj8 {
+    margin-left: 8px;
+  }
+
+  .shuju {
+    margin: 0 0 8px;
+    flex: auto;
+  }
 }
 
-.jzdq td,
-.jzdq th {
-  border-bottom: 1px solid #a1a1a1;
-
-  padding: 10px;
+.qgdt::-webkit-scrollbar {
+  display: none;
 }
 
-#code-box {
-  background-color: #1e1e1e;
-  padding: 5px;
+.bj8 {
+  margin: 8px;
+}
+
+.zbj8 {
+  margin-left: 8px;
+}
+
+.ybj8 {
+  margin-right: 8px;
+}
+
+.sbj8 {
+  margin-top: 8px;
+}
+
+.yuanjiao {
   border-radius: 15px;
-  display: flex;
-  margin: unset;
 }
 
-#code {
-  max-width: 700px;
-  margin: 0px auto;
-  padding: 0px 10px;
-}
+@media (min-width: 601px) {
+  .cebian {
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(15px);
+    z-index: 1;
+    position: fixed;
+    top: 72px;
+    left: 8px;
+    bottom: 8px;
+  }
 
-* {
-  font-family: "Helvetica Neue", "PingFang SC", "Source Han Sans",
-    "Microsoft YaHei UI", "Microsoft YaHei", "Roboto Mono", monospace, Arial,
-    sans-serif;
-}
-
-code {
-  font-size: 12px;
-}
-
-nav {
-  padding-top: 20px;
-}
-
-h6 {
-  margin-top: unset;
-}
-
-h2 {
-  margin-top: 15px;
-  margin-bottom: unset;
+  .zbj64 {
+    margin-left: 208px;
+  }
 }
