@@ -11,13 +11,13 @@
   "display": "standalone",
   "icons": [
     {
-      "src": "../img/apple-touch-icon.png",
+      "src": "../img/android-chrome-192x192.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any maskable"
     },
     {
-      "src": "../img/logo.png",
+      "src": "../img/android-chrome-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     },

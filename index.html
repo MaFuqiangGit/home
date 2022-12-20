@@ -49,7 +49,7 @@
             <!--左区头像-->
             <div class="flex column" style="padding: 5px;margin-top: 30px ;
                     align-items: center;border-bottom: 1px solid #999; border-radius: 15px;">
-                <img src="./img/logo.png" style=" border-radius: 15px;" class="yinying" width="130px" height="130px"
+                <img src="./img/logo.jpg" style=" border-radius: 15px;" class="yinying" width="130px" height="130px"
                     alt="">
                 <div style="font-size: 23px;">马富强</div>
             </div>
@@ -131,6 +131,14 @@
             </div>
         </div>
     </div>
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", function () {
+                navigator.serviceWorker.register("sw.js");
+            });
+        }
+
+    </script>
 </body>
 
 </html>
