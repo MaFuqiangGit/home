@@ -1,25 +1,59 @@
+@media (prefers-color-scheme: light) {
+  body {
+    background: linear-gradient(
+      45deg,
+      #feac5e 0,
+      #feac5e 16.66%,
+      #1cbbb4 16.66%,
+      #1cbbb4 33.33%,
+      #39b54a 33.33%,
+      #39b54a 50%,
+      #feac5e 50%,
+      #feac5e 66.66%,
+      #1cbbb4 66.66%,
+      #1cbbb4 83.33%,
+      #39b54a 83.33%,
+      #39b54a 50%
+    );
+  }
+  .baise {
+    background-color: #f3feff;
+  }
+  .touming {
+    background-color: #ffffffa6;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(
+      45deg,
+      #cd8c50 0,
+      #cd8c50 16.66%,
+      #0e5c58 16.66%,
+      #0e5c58 33.33%,
+      #267731 33.33%,
+      #267731 50%,
+      #cd8c50 50%,
+      #cd8c50 66.66%,
+      #0e5c58 66.66%,
+      #0e5c58 83.33%,
+      #267731 83.33%,
+      #267731 50%
+    );
+  }
+  .baise {
+    background-color: #202b20;
+  }
+  .touming {
+    background-color: #000000a6;
+  }
+}
 body {
   margin: 0px;
-  background: linear-gradient(
-    45deg,
-    #feac5e 0,
-    #feac5e 16.66%,
-    #1cbbb4 16.66%,
-    #1cbbb4 33.33%,
-    #39b54a 33.33%,
-    #39b54a 50%,
-    #feac5e 50%,
-    #feac5e 66.66%,
-    #1cbbb4 66.66%,
-    #1cbbb4 83.33%,
-    #39b54a 83.33%,
-    #39b54a 50%
-  );
   background-size: 800px 800px;
 }
 
 header {
-  background-color: rgba(255, 255, 255, 0.65);
   height: 60px;
   position: fixed;
   top: 4px;
@@ -70,10 +104,6 @@ a {
     rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
 }
 
-.baise {
-  background-color: white;
-}
-
 .flex1 {
   flex: 1;
 }
@@ -91,22 +121,6 @@ a {
   border-bottom: 1px solid #999;
   font-size: 15px;
   color: #666;
-}
-
-/*当屏幕小于600px是生效*/
-@media (max-width: 600px) {
-  .cebian {
-    display: none;
-  }
-
-  .mzbj8 {
-    margin-left: 8px;
-  }
-
-  .shuju {
-    margin: 0 0 8px;
-    flex: auto;
-  }
 }
 
 .qgdt::-webkit-scrollbar {
@@ -132,11 +146,24 @@ a {
 .yuanjiao {
   border-radius: 15px;
 }
+/*当屏幕小于600px是生效*/
+@media (max-width: 600px) {
+  .cebian {
+    display: none;
+  }
+
+  .mzbj8 {
+    margin-left: 8px;
+  }
+
+  .shuxiang {
+    flex-direction: column;
+  }
+}
 
 @media (min-width: 601px) {
   .cebian {
     width: 200px;
-    background-color: rgba(255, 255, 255, 0.65);
     backdrop-filter: blur(15px);
     z-index: 1;
     position: fixed;
