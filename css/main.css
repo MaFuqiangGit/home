@@ -31,6 +31,17 @@
     background-color: #ffffffa6;
   }
 
+  a {
+    color: #000
+  }
+
+  .shuju p {
+    color: dimgrey;
+  }
+
+  .shuju b {
+    color: #444;
+  }
 }
 
 /*暗色模式*/
@@ -60,6 +71,18 @@
   .touming {
     background-color: #000000a6;
   }
+
+  a {
+    color: #aaa
+  }
+
+  .shuju p {
+    color: #999;
+  }
+
+  .shuju b {
+    color: #aaa;
+  }
 }
 
 body {
@@ -84,7 +107,6 @@ header {
 }
 
 header a {
-  color: #000;
   text-shadow: .8px .8px 0px #999;
 }
 
@@ -114,7 +136,6 @@ footer a {
 }
 
 a {
-  color: #000;
   text-decoration: none;
 }
 
@@ -155,13 +176,11 @@ a {
 .shuju p {
   margin: 5px;
   font-size: 12px;
-  color: dimgrey;
 }
 
 .shuju b {
   margin: 0 20px;
   font-size: 14px;
-  color: #444;
 }
 
 .qgdt::-webkit-scrollbar {
