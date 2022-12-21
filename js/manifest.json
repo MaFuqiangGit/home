@@ -5,8 +5,8 @@
   "description": "马富强的个人网站，从零开始学编程。",
   "start_url": "https://cpdm.wang/",
   "id": "/",
-  "background_color": "#ffffff",
-  "theme_color": "#76d8ff",
+  "background_color": "#39b54a",
+  "theme_color": "#1cbbb4",
   "dir": "auto",
   "display": "standalone",
   "icons": [

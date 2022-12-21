@@ -5,8 +5,8 @@
   "description": "浏览器内核版本ua检测",
   "start_url": "https://cpdm.wang/ua/ua.html",
   "id": "/",
-  "background_color": "#ffffff",
-  "theme_color": "#76d8ff",
+  "background_color": "#39b54a",
+  "theme_color": "#1cbbb4",
   "dir": "auto",
   "display": "standalone",
   "icons": [
