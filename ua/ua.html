@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="x5-page-mode" content="app">
+  <meta name="x5-page-mode" content="app" />
   <meta name="description" content="浏览器内核版本ua检测" />
   <meta name="keywords" content="浏览器内核版本ua检测" />
   <meta name="copyright" content="浏览器内核版本ua检测" />
@@ -34,7 +34,7 @@
   <link rel="stylesheet" type="text/css" href="../css/main.css" />
   <script type="text/javascript" src="ua.js"></script>
   <title>浏览器内核检测</title>
-  <style type="text/css"></style>
+  <script src="../js/main.js"></script>
   <script type="text/javascript">
     function init() {
       var dev = document.getElementById("dev"),
@@ -57,7 +57,7 @@
             dev.innerHTML = "电脑🖥️";
           }
         }
-  
+
         if (what) {
           if (UA.isChrome()) {
             what.innerHTML = "Chrome或者Chrome内核";
@@ -70,7 +70,7 @@
           } else if (UA.isOpera()) {
             what.innerHTML = "Opera";
             /*} else if (UA.isIE()) {
-                          what.innerHTML = "Internet Explorer";*/
+                        what.innerHTML = "Internet Explorer";*/
           } else if (UA.isSafari()) {
             what.innerHTML = "Safari";
           } else if (UA.isWebKit()) {
@@ -89,65 +89,216 @@
 </head>
 
 <body>
-  <header>
-    <h2>浏览器内核检测</h2>
-    <h6>Browser kernel detection</h6>
-    <nav>
-      <a href="../index.html">首页</a>
-      <a href="ua.html">浏览器内核检测</a>
-    </nav>
+
+  <!--顶栏-->
+  <header class="yinying yuanjiao touming flex"">
+        <!--左边logo-->
+        <b class=" touzuobian">
+    <div class=" sjyincang">cpdm.wang</div></b>
+    <!--中间-->
+    <div class=" touzhongjian flex">
+      <a href=" ../index.html">首页</a>
+      <a href=" ../index.html">分类</a>
+      <a href=" ../index.html">其它</a>
+    </div>
+    <!--右边-->
+    <div class="touyoubian">
+      <div class="sjyincang"></div>
+    </div>
   </header>
+  <!--主体-->
+  <div class=" flex">
+    <!--侧边栏-->
+    <div class="flex column sjyincang cebian yinying yuanjiao touming">
+      <!--左区头像-->
+      <div class="flex column" style="padding: 5px;margin-top: 25px ;
+                    align-items: center; ">
+        <img src="../img/logo.jpg" class="yinying yuanjiao" width="130px" height="130px" alt="">
+        <div style="font-size: 23px; margin-top: 5px;">马富强</div>
+      </div>
+      <!--导航区-->
+      <div style="
+              text-align: center;
+                font-size: 15px;
+                margin-top: 5px;">
+        风物长宜放眼量
+      </div>
+      <div style="
+              text-align: center;
+                font-size: 15px;
+                margin-bottom: 15px;">
+        眼界无穷世界宽
+      </div>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="daohang">
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
 
-  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="jzdq"
-    style="text-shadow: 0 1px 0 #ddd; line-height: 1.5; border-radius: 15px; ">
-    <thead>
-      <tr>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
+        <tbody>
+          <tr>
+            <td width="50%" align="right">
+              github:
+            </td>
+            <td>
+              <a href="https://github.com/gitMFQ" target="_blank" rel="noopener noreferrer">
+                gitMFQ
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td width="50%" align="right">
+              gitee:
+            </td>
+            <td>
+              <a href="https://gitee.com/gitMFQ" target="_blank" rel="noopener noreferrer">
+                gitMFQ
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td width="50%" align="right">
+              酷安账号:
+            </td>
+            <td>
+              <a href="http://www.coolapk.com/u/469901" target="_blank" rel="noopener noreferrer">
+                单薄如纸
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
-    <tbody>
-      <tr>
-        <td width="25%" align="right">设备</td>
-        <td>
-          <span id="dev"></span>
-        </td>
-      </tr>
-      <tr>
-        <td width="25%" align="right">浏览器</td>
-        <td>
-          <span id="what"></span>
-        </td>
-      </tr>
-      <tr>
-        <td align="right">系统</td>
-        <td>未知系统</td>
-      </tr>
-      <tr>
-        <td align="right">完整ua</td>
-        <td>
-          <span style="font-size: 12px;" id="who"></span>
-        </td>
-      </tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <td align="right">ip地址</td>
-        <td>*.*.*.*</td>
-      </tr>
-    </tfoot>
-  </table>
 
-  <footer>
-    <a href="../index.html">首页</a>
-    <a href="ua.html">浏览器内核检测</a>
+      <footer>
+        <div class="banquan yinying">
+          <div>
+            <a href="https://www.midorg.com/" target="_blank" rel="noopener noreferrer">
+              元岛
+            </a>
+            ·
+            <a href="https://kangwenchang.com/" target="_blank" rel="noopener noreferrer">
+              康文昌
+            </a>
+          </div>
+          <p style="margin-block-end: 0px;">Copyright © 2022-2023 </p>
+          <a style="margin-bottom: 5px;" href="https://cpdm.wang">cpdm.wang</a>
+          <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">
+            这里没有备案号
+          </a>
+        </div>
+      </footer>
+    </div>
+    <div class=" flex flex1 column zbj64 " style="margin-top:64px;">
+      <!--内容区-->
+      <div style="overflow: scroll;" class="flex shuxiang qgdt">
+        <!--左区-->
+        <div style="flex:4" class="flex column bj8">
+          <!--数据区-->
+          <div class="flex">
+            <!--数据1-->
+            <a href="https://music.cpdm.wang/" target="_blank" rel="noopener noreferrer"
+              class="flex flex1 yuanjiao shuju yinying beijing shuxiang">
+              <img src="../img/music.png" style=" class=" yinying yuanjiao" width="60px" height="60px" alt="">
+              <div>
+                <b>音乐</b>
+                <div class="sjyincang">
+                  <p>第三方网易云音乐</p>
+                  <p>yesplaymusic</p>
+                </div>
+              </div>
+            </a>
+            <!--数据2-->
+            <a href="../ua/ua.html" class="flex flex1 yuanjiao shuju zbj8 yinying beijing shuxiang">
+              <img src="../img/chrome.png" class="yinying yuanjiao" width="60px" height="60px" alt="">
+              <div><b>内核</b>
+                <div class="sjyincang">
+                  <p>浏览器内核版本信</p>
+                  <p>息检测</p>
+                </div>
+              </div>
+            </a>
+            <!--数据3-->
+            <a href="../index.html" style=" height:100px ;overflow: hidden; align-items: center;justify-content: center;"
+              class="flex flex1 yuanjiao   zbj8 yinying beijing">
+              <img src="../img/" width="100%" height="auto" alt="">
 
-    <p>Copyright © 2022-2023 <a href="https://cpdm.wang">cpdm.wang</a></p>
-    <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener  noreferrer">
-      这里没有备案号
-    </a>
-  </footer>
+            </a>
+            <!--数据4-->
+            <a href="../index.html" style="height:100px" class="flex1 yuanjiao   zbj8 yinying beijing"></a>
+
+          </div>
+          <!--列表区域-->
+          <div class="flex column">
+            <!--列表项-->
+            <div style="text-shadow: 0 .8px 0 #ddd;text-align: center;" class="yinying yuanjiao  beijing sbj8"><h1 style="margin-bottom: 0;">浏览器内核检测</h1><h5 style="margin-top: 0;">Browser kernel detection</h5></div>
+            <!--列表项-->
+              <table width="100%" border="0" cellspacing="0" cellpadding="0" class="llqnh yinying yuanjiao beijing sbj8"
+                style="text-shadow: 0 .8px 0 #ddd; line-height: 1.5;">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td width="30%" align="right">设备:</td>
+                    <td>
+                      <span id="dev"></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="30%" align="right">浏览器:</td>
+                    <td>
+                      <span id="what"></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="right">系统:</td>
+                    <td>未知系统</td>
+                  </tr>
+                  <tr>
+                    <td align="right">完整ua:</td>
+                    <td>
+                      <span style="font-size: 12px" id="who"></span>
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td align="right">ip地址:</td>
+                    <td>*.*.*.*</td>
+                  </tr>
+                </tfoot>
+              </table>
+          </div>
+        </div>
+        <!--右区-->
+        <div style="flex: 1;" class="flex ybj8 sbj8 mzbj8 column">
+          <!--提示区域-->
+          <div style="height:150px ; position: relative;" class="yinying yuanjiao  beijing">
+          </div>
+          <!--消息区域-->
+          <div style="align-items: center;
+                        justify-content: center;background-color: #38B571;overflow: hidden;margin-bottom: 8px;"
+            class="flex column yinying yuanjiao sbj8">
+            <img src="../img/weixin.jpg" style="width:100%;height:100%;object-fit: contain;" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("sw.js");
+      });
+    }
+
+  </script>
 </body>
 
 </html>

@@ -238,6 +238,10 @@ a {
   .shuxiang {
     flex-direction: column;
   }
+
+  .llqnh {
+    padding: 20px 5px 40px 5px;
+  }
 }
 
 /*屏幕宽度601px外生效*/
@@ -272,4 +276,15 @@ a {
   .zbj64 {
     margin-left: 208px;
   }
+
+  .llqnh {
+    padding: 20px 65px 40px 65px;
+  }
+
+}
+
+.llqnh td,
+.llqnh th {
+  border-bottom: 1px solid #a1a1a1;
+  padding: 10px;
 }
