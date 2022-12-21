@@ -4,7 +4,7 @@
     sans-serif;
 }
 
-
+/*亮色模式*/
 @media (prefers-color-scheme: light) {
   body {
     background: linear-gradient(45deg,
@@ -23,7 +23,7 @@
     color: #202b20;
   }
 
-  .baise {
+  .beijing {
     background-color: #f3feff;
   }
 
@@ -33,6 +33,7 @@
 
 }
 
+/*暗色模式*/
 @media (prefers-color-scheme: dark) {
   body {
     background: linear-gradient(45deg,
@@ -52,7 +53,7 @@
     color: #999;
   }
 
-  .baise {
+  .beijing {
     background-color: #202b20;
   }
 
@@ -76,6 +77,15 @@ header {
   margin-right: 8px;
   margin-left: 8px;
   backdrop-filter: blur(15px);
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+header a {
+  color: #000;
+  text-shadow: .8px .8px 0px #999;
 }
 
 footer {
@@ -104,7 +114,7 @@ footer a {
 }
 
 a {
-  color: #006699;
+  color: #000;
   text-decoration: none;
 }
 
@@ -136,6 +146,24 @@ a {
   color: #666;
 }
 
+.shuju {
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.shuju p {
+  margin: 5px;
+  font-size: 12px;
+  color: dimgrey;
+}
+
+.shuju b {
+  margin: 0 20px;
+  font-size: 14px;
+  color: #444;
+}
+
 .qgdt::-webkit-scrollbar {
   display: none;
 }
@@ -160,9 +188,27 @@ a {
   border-radius: 15px;
 }
 
-/*当屏幕小于600px是生效*/
-@media (max-width: 600px) {
-  .cebian {
+/*屏幕宽度600px内生效*/
+@media (max-width: 720px) {
+  .touzuobian {
+    flex: 1;
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  .touzhongjian {
+    justify-content: space-around;
+    margin: 0 10px;
+    flex: 3
+  }
+
+  .touyoubian {
+    flex: 1;
+    text-align: right;
+    margin-right: 20px;
+  }
+
+  .sjyincang {
     display: none;
   }
 
@@ -175,7 +221,25 @@ a {
   }
 }
 
-@media (min-width: 601px) {
+/*屏幕宽度601px外生效*/
+@media (min-width: 721px) {
+  .touzuobian {
+    flex: 2;
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  .touzhongjian {
+    justify-content: space-around;
+    flex: 1
+  }
+
+  .touyoubian {
+    flex: 2;
+    text-align: right;
+    margin-right: 20px;
+  }
+
   .cebian {
     width: 200px;
     backdrop-filter: blur(15px);
