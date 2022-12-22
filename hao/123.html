@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../js/main.js"></script>
+    <style>
+      /*亮色模式*/
+      @media (prefers-color-scheme: light) {
+        body {
+          background: linear-gradient(
+            45deg,
+            #feac5e 0,
+            #feac5e 16.66%,
+            #1cbbb4 16.66%,
+            #1cbbb4 33.33%,
+            #39b54a 33.33%,
+            #39b54a 50%,
+            #feac5e 50%,
+            #feac5e 66.66%,
+            #1cbbb4 66.66%,
+            #1cbbb4 83.33%,
+            #39b54a 83.33%,
+            #39b54a 50%
+          );
+          color: #202b20;
+        }
+        .beijing {
+          background-color: #f3feff;
+        }
+
+        .touming {
+          background-color: #ffffffa6;
+        }
+
+        a {
+          color: #000;
+        }
+        input::placeholder {
+          color: #202b20;
+        }
+        input::-webkit-input-placeholder {
+          color: #202b20;
+        }
+      }
+      /*暗色模式*/
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: linear-gradient(
+            45deg,
+            #cd8c50 0,
+            #cd8c50 16.66%,
+            #0e5c58 16.66%,
+            #0e5c58 33.33%,
+            #267731 33.33%,
+            #267731 50%,
+            #cd8c50 50%,
+            #cd8c50 66.66%,
+            #0e5c58 66.66%,
+            #0e5c58 83.33%,
+            #267731 83.33%,
+            #267731 50%
+          );
+          color: #999;
+        }
+        .beijing {
+          background-color: #202b20;
+        }
+
+        .touming {
+          background-color: #000000a6;
+        }
+        a {
+          color: #aaa;
+        }
+        input::placeholder {
+          color: #ccc;
+        }
+        input::-webkit-input-placeholder {
+          color: #ccc;
+        }
+        #shurukuang {
+          color: #aaa;
+        }
+      }
+
+      body {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-size: 800px 800px;
+      }
+
+      .hezi {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .yinying {
+        box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+          rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+      }
+
+      .mohu {
+        /* 模糊效果 */
+        backdrop-filter: blur(15px);
+      }
+      .yuanjiao {
+        /* 圆角 */
+        border-radius: 15px;
+      }
+      #shurukuang {
+        display: block;
+        /* 宽度 */
+        width: 106%;
+        /* 高度 */
+        height: 60px;
+        max-width: 750px;
+        margin: 10px auto;
+        text-align: center;
+        font-size: 30px;
+        outline: none;
+        font-weight: 560;
+      }
+      #anniu {
+        margin-left: -60px;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hezi">
+      <input
+        placeholder="今日事，今日毕。"
+        id="shurukuang"
+        class="touming yinying mohu yuanjiao"
+      />
+      <span id="anniu" onclick="dianji()">✅</span>
+    </div>
+    <script>
+      let youshi = false;
+
+      function dianji() {
+        let anniu = document.getElementById("anniu");
+        let shurukuang = document.getElementById("shurukuang");
+
+        if (youshi) {
+          youshi = false;
+          anniu.innerText = "✅";
+          shurukuang.value = "";
+          shurukuang.readOnly = false;
+          window.localStorage.removeItem("shiqing");
+        } else {
+          youshi = true;
+          anniu.innerText = "❎";
+          shurukuang.readOnly = true;
+          window.localStorage.setItem("shiqing", shurukuang.value);
+        }
+      }
+      let data = window.localStorage.getItem("shiqing");
+      if (data) {
+        document.getElementById("shurukuang").value = data;
+        dianji();
+      }
+    </script>
+  </body>
+</html>
