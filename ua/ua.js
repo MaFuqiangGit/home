@@ -1,18 +1,4 @@
-/*jslint browser: true, regexp: true, maxerr: 50, indent: 4 */
-/**
- * A UserAgent detection library.
- *
- * This library relies on the navigator.userAgent property and hence does not
- * work for custom UserAgent settings.
- *
- * Apart from supporting detection of major browser vendors, the library also
- * supports detection of various devices.
- *
- * Copyright (c) 2012-2013, Gopalarathnam Venkatesan
- * All rights reserved.
- *
- * @module UA
- */
+
 var UA = (function (window, navigator) {
   "use strict";
 
@@ -25,136 +11,167 @@ var UA = (function (window, navigator) {
   }
 
   return {
-    /**
-     * Return true if the browser is Chrome or compatible.
-     *
-     * @method isChrome
-     */
-    isChrome: detect(/webkit\W.*(chrome|chromium)\W/i),
 
-    /**
-     * Return true if the browser is Firefox.
-     *
-     * @method isFirefox
-     */
+    isChrome: detect(/webkit\W.*(chrome|chromium|crios)\W/i),
+
     isFirefox: detect(/mozilla.*\Wfirefox\W/i),
 
-    /**
-     * Return true if the browser is using the Gecko engine.
-     *
-     * This is probably a better way to identify Firefox and other browsers
-     * that use XulRunner.
-     *
-     * @method isGecko
-     */
     isGecko: detect(/mozilla(?!.*webkit).*\Wgecko\W/i),
 
-    /**
-     * Return true if the browser is Internet Explorer.
-     *
-     * @method isIE
-     */
-    isIE:
-      function () {
-        return navigator.appName === "Microsoft Internet Explorer";
-      } || detect(/\b Trident \b/),
+    isIE: detect(/\bTrident\b/),
 
-    /**
-     * Return true if the browser is running on Kindle.
-     *
-     * @method isKindle
-     */
-    isKindle: detect(/\W(kindle|silk)\W/i),
-
-    /**
-     * Return true if the browser is running on a mobile device.
-     *
-     * @method isMobile
-     */
-    isMobile: detect(/(iphone|ipod|((?:android)?.*?mobile)|blackberry|nokia)/i),
-
-    /**
-     * Return true if we are running on Opera.
-     *
-     * @method isOpera
-     */
     isOpera: detect(/opera.*\Wpresto\W/i),
 
-    /**
-     * Return true if the browser is Safari.
-     *
-     * @method isSafari
-     */
     isSafari: detect(/webkit\W(?!.*chrome).*safari\W/i),
 
-    /**
-     * Return true if the browser is running on a tablet.
-     *
-     * One way to distinguish Android mobiles from tablets is that the
-     * mobiles contain the string "mobile" in their UserAgent string.
-     * If the word "Android" isn't followed by "mobile" then its a
-     * tablet.
-     *
-     * @method isTablet
-     */
-    isTablet: detect(/(iPad|android(?!.*mobile))/i),
+    isKindle: detect(/\W(kindle|silk)\W/i),
 
-    /**
-     * Return true if the browser is running on a TV!
-     *
-     * @method isTV
-     */
+    isMobile: detect(/(iphone|ipod|((?:android)?.*?mobile)|blackberry|nokia)/i),
+
+    isTablet: detect(/(tablet|ipad|android(?!.*mobile))/i),
+
     isTV: detect(/googletv|sonydtv/i),
 
-    /**
-     * Return true if the browser is running on a WebKit browser.
-     *
-     * @method isWebKit
-     */
     isWebKit: detect(/webkit\W/i),
 
-    /**
-     * Return true if the browser is running on an Android browser.
-     *
-     * @method isAndroid
-     */
+    isHarmonyOS: detect(/harmonyos/i),
+
     isAndroid: detect(/android/i),
 
-    /**
-     * Return true if the browser is running on any iOS device.
-     *
-     * @method isIOS
-     */
-    isIOS: detect(/(ipad|iphone|ipod)/i),
+    isIOS: detect(/(iphone|ipod)/i),
 
-    /**
-     * Return true if the browser is running on an iPad.
-     *
-     * @method isIPad
-     */
-    isIPad: detect(/ipad/i),
+    isWindows: detect(/windows/i),
 
-    /**
-     * Return true if the browser is running on an iPhone.
-     *
-     * @method isIPhone
-     */
+    isLinux: detect(/linux(?!.*android)/i),
+
     isIPhone: detect(/iphone/i),
 
-    /**
-     * Return true if the browser is running on an iPod touch.
-     *
-     * @method isIPod
-     */
+    isSymbian: detect(/symbian/i),
+
+    isMac: detect(/macintosh.*\Wmac\W/i),
+
+    isIPad: detect(/ipad/i),
+
     isIPod: detect(/ipod/i),
 
-    /**
-     * Return the complete UserAgent string verbatim.
-     *
-     * @method whoami
-     */
+    isWeixin: detect(/micromessenger/i),
+
+    isEdge: detect(/edg/i),
+
+    isQQBrowser: detect(/qqbrowser/i),
+
+    isQuark: detect(/quark/i),
+
+    isMqq: detect(/qqtheme/i),
+
+    isUCBrowser: detect(/ucbrowser/i),
+
+    isSearchCraft: detect(/searchcraft/i),
+
+    isbaiduboxapp: detect(/baiduboxapp/i),
+
+    isNokiaBrowser: detect(/nokiabrowser/i),
+
+    isLenovoBrowser: detect(/lenovobrowser/i),
+
     whoami: function () {
       return ua;
     },
   };
 })(window, navigator);
+
+
+function init() {
+  var dev = document.getElementById("dev"),
+    os = document.getElementById("os"),
+    who = document.getElementById("who"),
+    what = document.getElementById("what");
+
+  if (UA) {
+    if (who) {
+      who.innerHTML = UA.whoami();
+    }
+
+    if (os) {
+      if (UA.isHarmonyOS()) {
+        os.innerHTML = "鸿蒙HarmonyOS";
+      } else if (UA.isAndroid()) {
+        os.innerHTML = "安卓Android";
+      } else if (UA.isIPad()) {
+        os.innerHTML = "iPadOS";
+      } else if (UA.isIOS()) {
+        os.innerHTML = "iOS";
+      } else if (UA.isWindows()) {
+        os.innerHTML = "WindowsOS";
+      } else if (UA.isLinux()) {
+        os.innerHTML = "Linux";
+      } else if (UA.isSymbian()) {
+        os.innerHTML = "塞班SymbianOS";
+      } else if (UA.isMac()) {
+        os.innerHTML = "MacOS";
+      } else {
+        os.innerHTML = "未知";
+      }
+    }
+
+
+    if (dev) {
+      if (UA.isTablet()) {
+        dev.innerHTML = "平板";
+      } else if (UA.isMobile()) {
+        dev.innerHTML = "手机📱";
+      } else if (UA.isTV()) {
+        dev.innerHTML = "电视📺";
+      } else {
+        dev.innerHTML = "电脑🖥️";
+      }
+    }
+
+    if (what) {
+      if (UA.isWeixin()) {
+        what.innerHTML = "微信";
+      } else if (UA.isEdge()) {
+        what.innerHTML = "Microsoft Edge";
+      } else if (UA.isMqq()) {
+        what.innerHTML = "QQ";
+      } else if (UA.isQQBrowser()) {
+        what.innerHTML = "QQ浏览器";
+      } else if (UA.isQuark()) {
+        what.innerHTML = "夸克浏览器Quark";
+      } else if (UA.isUCBrowser()) {
+        what.innerHTML = "UC浏览器";
+      } else if (UA.isSearchCraft()) {
+        what.innerHTML = "简单搜索";
+      } else if (UA.isbaiduboxapp()) {
+        what.innerHTML = "百度app";
+      } else if (UA.isLenovoBrowser()) {
+        what.innerHTML = "联想浏览器";
+      } else if (UA.isChrome()) {
+        what.innerHTML = "Chrome或Chrome内核";
+      } else if (UA.isIE()) {
+        what.innerHTML = "ie浏览器";
+      } else if (UA.isFirefox()) {
+        what.innerHTML = "Firefox火狐";
+      } else if (UA.isGecko()) {
+        what.innerHTML = "Gecko内核";
+      } else if (UA.isOpera()) {
+        what.innerHTML = "Opera";
+        /*} else if (UA.isIE()) {
+                              what.innerHTML = "Internet Explorer";*/
+      } else if (UA.isNokiaBrowser()) {
+        what.innerHTML = "诺基亚浏览器";
+      } else if (UA.isSafari()) {
+        what.innerHTML = "Safari";
+      } else if (UA.isWebKit()) {
+        what.innerHTML = "WebKit";
+      }
+    }
+  }
+}
+
+if (window.attachEvent) {
+  document.onreadystatechange = init;
+} else if (window.addEventListener) {
+  document.addEventListener("DOMContentLoaded", init, false);
+}
+

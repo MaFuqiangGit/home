@@ -36,55 +36,6 @@
   <title>浏览器内核检测</title>
   <script src="../js/main.js"></script>
   <script type="text/javascript">
-    function init() {
-      var dev = document.getElementById("dev"),
-        who = document.getElementById("who"),
-        what = document.getElementById("what");
-
-      if (UA) {
-        if (who) {
-          who.innerHTML = UA.whoami();
-        }
-
-        if (dev) {
-          if (UA.isMobile()) {
-            dev.innerHTML = "手机📱";
-          } else if (UA.isTablet()) {
-            dev.innerHTML = "平板";
-          } else if (UA.isTV()) {
-            dev.innerHTML = "电视📺";
-          } else {
-            dev.innerHTML = "电脑🖥️";
-          }
-        }
-
-        if (what) {
-          if (UA.isChrome()) {
-            what.innerHTML = "Chrome或者Chrome内核";
-          } else if (UA.isIE()) {
-            what.innerHTML = "ie浏览器";
-          } else if (UA.isFirefox()) {
-            what.innerHTML = "Firefox火狐";
-          } else if (UA.isGecko()) {
-            what.innerHTML = "Firefox内核";
-          } else if (UA.isOpera()) {
-            what.innerHTML = "Opera";
-            /*} else if (UA.isIE()) {
-                        what.innerHTML = "Internet Explorer";*/
-          } else if (UA.isSafari()) {
-            what.innerHTML = "Safari";
-          } else if (UA.isWebKit()) {
-            what.innerHTML = "WebKit";
-          }
-        }
-      }
-    }
-
-    if (window.attachEvent) {
-      document.onreadystatechange = init;
-    } else if (window.addEventListener) {
-      document.addEventListener("DOMContentLoaded", init, false);
-    }
   </script>
 </head>
 
@@ -228,7 +179,9 @@
                 </tr>
                 <tr>
                   <td align="right">系统:</td>
-                  <td>未知系统</td>
+                  <td>
+                    <span id="os"></span>
+                  </td>
                 </tr>
                 <tr>
                   <td align="right">完整ua:</td>
@@ -276,7 +229,7 @@
               </a>
               <!--数据4-->
               <a href="../index.html" style="height:100px" class="flex1 yuanjiao   zbj8 yinying beijing"></a>
-           </div>
+            </div>
           </div>
         </div>
         <!--右区-->
