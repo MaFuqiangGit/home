@@ -1,8 +1,8 @@
 
-var UA = (function (window, navigator) {
+let UA = (function (window, navigator) {
   "use strict";
 
-  var ua = (window.navigator && navigator.userAgent) || "";
+  let ua = (window.navigator && navigator.userAgent) || "";
 
   function detect(pattern) {
     return function () {
@@ -79,99 +79,4 @@ var UA = (function (window, navigator) {
     },
   };
 })(window, navigator);
-
-
-function init() {
-  var dev = document.getElementById("dev"),
-    os = document.getElementById("os"),
-    who = document.getElementById("who"),
-    what = document.getElementById("what");
-
-  if (UA) {
-    if (who) {
-      who.innerHTML = UA.whoami();
-    }
-
-    if (os) {
-      if (UA.isHarmonyOS()) {
-        os.innerHTML = "鸿蒙HarmonyOS";
-      } else if (UA.isAndroid()) {
-        os.innerHTML = "安卓Android";
-      } else if (UA.isIPad()) {
-        os.innerHTML = "iPadOS";
-      } else if (UA.isIOS()) {
-        os.innerHTML = "iOS";
-      } else if (UA.isWindows()) {
-        os.innerHTML = "WindowsOS";
-      } else if (UA.isLinux()) {
-        os.innerHTML = "Linux";
-      } else if (UA.isSymbian()) {
-        os.innerHTML = "塞班SymbianOS";
-      } else if (UA.isMac()) {
-        os.innerHTML = "MacOS";
-      } else {
-        os.innerHTML = "未知";
-      }
-    }
-
-
-    if (dev) {
-      if (UA.isTablet()) {
-        dev.innerHTML = "平板";
-      } else if (UA.isMobile()) {
-        dev.innerHTML = "手机📱";
-      } else if (UA.isTV()) {
-        dev.innerHTML = "电视📺";
-      } else {
-        dev.innerHTML = "电脑🖥️";
-      }
-    }
-
-    if (what) {
-      if (UA.isWeixin()) {
-        what.innerHTML = "微信";
-      } else if (UA.isEdge()) {
-        what.innerHTML = "Microsoft Edge";
-      } else if (UA.isMqq()) {
-        what.innerHTML = "QQ";
-      } else if (UA.isQQBrowser()) {
-        what.innerHTML = "QQ浏览器";
-      } else if (UA.isQuark()) {
-        what.innerHTML = "夸克浏览器Quark";
-      } else if (UA.isUCBrowser()) {
-        what.innerHTML = "UC浏览器";
-      } else if (UA.isSearchCraft()) {
-        what.innerHTML = "简单搜索";
-      } else if (UA.isbaiduboxapp()) {
-        what.innerHTML = "百度app";
-      } else if (UA.isLenovoBrowser()) {
-        what.innerHTML = "联想浏览器";
-      } else if (UA.isChrome()) {
-        what.innerHTML = "Chrome或Chrome内核";
-      } else if (UA.isIE()) {
-        what.innerHTML = "ie浏览器";
-      } else if (UA.isFirefox()) {
-        what.innerHTML = "Firefox火狐";
-      } else if (UA.isGecko()) {
-        what.innerHTML = "Gecko内核";
-      } else if (UA.isOpera()) {
-        what.innerHTML = "Opera";
-        /*} else if (UA.isIE()) {
-                              what.innerHTML = "Internet Explorer";*/
-      } else if (UA.isNokiaBrowser()) {
-        what.innerHTML = "诺基亚浏览器";
-      } else if (UA.isSafari()) {
-        what.innerHTML = "Safari";
-      } else if (UA.isWebKit()) {
-        what.innerHTML = "WebKit";
-      }
-    }
-  }
-}
-
-if (window.attachEvent) {
-  document.onreadystatechange = init;
-} else if (window.addEventListener) {
-  document.addEventListener("DOMContentLoaded", init, false);
-}
 
