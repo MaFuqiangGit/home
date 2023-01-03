@@ -27,11 +27,11 @@
           );
           color: #202b20;
         }
-        .beijing {
+        .背景 {
           background-color: #f3feff;
         }
 
-        .touming {
+        .透明 {
           background-color: #ffffffa6;
         }
 
@@ -65,11 +65,11 @@
           );
           color: #999;
         }
-        .beijing {
+        .背景 {
           background-color: #202b20;
         }
 
-        .touming {
+        .透明 {
           background-color: #000000a6;
         }
         a {
@@ -81,7 +81,7 @@
         input::-webkit-input-placeholder {
           color: #ccc;
         }
-        #shurukuang {
+        #输入框 {
           color: #aaa;
         }
       }
@@ -95,26 +95,26 @@
         background-size: 800px 800px;
       }
 
-      .hezi {
+      .输入框盒子 {
         display: flex;
         align-items: center;
         justify-content: center;
       }
 
-      .yinying {
+      .阴影 {
         box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
           rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
       }
 
-      .mohu {
+      .模糊 {
         /* 模糊效果 */
         backdrop-filter: blur(15px);
       }
-      .yuanjiao {
+      .圆角 {
         /* 圆角 */
         border-radius: 15px;
       }
-      #shurukuang {
+      #输入框 {
         display: block;
         /* 宽度 */
         width: 100%;
@@ -128,45 +128,45 @@
         font-weight: 560;
         border: 0px;
       }
-      #anniu {
+      #按钮 {
         margin-left: -60px;
         z-index: 2;
       }
     </style>
   </head>
   <body>
-    <div class="hezi">
+    <div class="输入框盒子">
       <input
         placeholder="今日事，今日毕。"
-        id="shurukuang"
-        class="touming yinying mohu yuanjiao"
+        id="输入框"
+        class="透明 阴影 模糊 圆角"
       />
-      <span id="anniu" onclick="dianji()">✅</span>
+      <span id="按钮" onclick="勾叉()">✅</span>
     </div>
     <script>
-      let youshi = false;
+      let 有事 = false;
 
-      function dianji() {
-        let anniu = document.getElementById("anniu");
-        let shurukuang = document.getElementById("shurukuang");
+      function 勾叉() {
+        let 按钮 = document.getElementById("按钮");
+        let 输入框 = document.getElementById("输入框");
 
-        if (youshi) {
-          youshi = false;
-          anniu.innerText = "✅";
-          shurukuang.value = "";
-          shurukuang.readOnly = false;
-          window.localStorage.removeItem("shiqing");
+        if (有事) {
+          有事 = false;
+          按钮.innerText = "✅";
+          输入框.value = "";
+          输入框.readOnly = false;
+          window.localStorage.removeItem("事情");
         } else {
-          youshi = true;
-          anniu.innerText = "❎";
-          shurukuang.readOnly = true;
-          window.localStorage.setItem("shiqing", shurukuang.value);
+          有事 = true;
+          按钮.innerText = "❎";
+          输入框.readOnly = true;
+          window.localStorage.setItem("事情", 输入框.value);
         }
       }
-      let data = window.localStorage.getItem("shiqing");
-      if (data) {
-        document.getElementById("shurukuang").value = data;
-        dianji();
+      let 事情数据 = window.localStorage.getItem("事情");
+      if (事情数据) {
+        document.getElementById("输入框").value = 事情数据;
+        勾叉();
       }
     </script>
   </body>
