@@ -17,7 +17,7 @@ async function start(){
         theH1.innerText = '未指定cookieId，无法加载验证码。';
         return;
     }
-    theImg.src = 'https://gitmfq.gitee.io/bing/img/loading.svg'
+    theImg.src = 'https://cpdm.eu.org/web/img/loading.svg'
     let res
     try{
         res = await nBGGFetch(`${window.location.origin}/edgesvc/turing/captcha/create`,{

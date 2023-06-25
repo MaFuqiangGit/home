@@ -31,7 +31,7 @@ function getAllQueryStrings() {
 function addImg(imgSrc) {
   let img = document.createElement('img')
   img.classList.add('display-img')
-  img.src = 'https://gitmfq.gitee.io/bing/img/loading.svg'
+  img.src = 'https://cpdm.eu.org/web/img/loading.svg'
   imgsDiv.appendChild(img)
   img.onload = () => {
     img.onload = undefined
