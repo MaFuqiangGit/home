@@ -4,7 +4,7 @@ import nBGGFetch from "./nBGGFetch.js";
  * 提示词管理器
  * */
 export default class CueWordWorker {
-  url = 'https://cpdm.eu.org/resource/cueWord.json'
+  url = './resource/cueWord.json'
   cueWordSelectsList //提示词列表dom
   cueWordSelected //已选择的提示词mod
   cueWordSearchInput //提示词搜索输入框dom
