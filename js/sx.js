@@ -3,7 +3,7 @@
 
     // 创建功能条容器
     var searchSwitchBar = document.createElement('div');
-    searchSwitchBar.style.display = 'flex';
+    searchSwitchBar.style.display = 'block';
     searchSwitchBar.style.fontSize = '15px';
     searchSwitchBar.style.left = '0px';
     searchSwitchBar.style.top = '0px';
