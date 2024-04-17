@@ -1,18 +1,8 @@
-// ==UserScript==
-// @name         搜索引擎切换功能条
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  在浏览器顶部添加一个功能条以切换搜索引擎
-// @author       Copilot
-// @match        *://*/*
-// @grant        none
-// ==/UserScript==
-
 (function() {
     'use strict';
 
     // 创建功能条容器
-    var searchSwitchBar = document.createElement('div');
+    var searchSwitchBar = document.createElement('header');
     searchSwitchBar.style.display = 'flex';
     searchSwitchBar.style.fontSize = '15px';
     searchSwitchBar.style.left = '0px';
