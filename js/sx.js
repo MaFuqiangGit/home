@@ -231,9 +231,9 @@ function addJumpSearchBox(){
   searchJumpBox.appendChild(punkJumpButton);
 
   punkJumpButton.onclick = function () {
-    let sss = prompt("请输入需要显示的引擎！\n格式举例：Quark-Zhihu-Toutiao-360\n则导航为：夸克、知乎、头条、360", GM_getValue("punk_setup_search") || punkDeafultMark);
+    let sss = prompt("请输入需要显示的引擎！\n格式举例：Quark-Zhihu-Toutiao-360\n则导航为：夸克、知乎、头条、360", webapp.getsave("punk_setup_search",'',true) || punkDeafultMark);
     if (sss) {
-      GM_setValue("punk_setup_search", sss);
+      webapp.putsave("punk_setup_search", sss,true);
       setTimeout(function(){location.reload();}, 200);
     }
     //console.log("用户设置:" + GM_getValue("punk_setup_search"));
@@ -305,7 +305,7 @@ function addSearchBox() {
   appBoxDiv.appendChild(ulList);
 
   let fragment = document.createDocumentFragment();//创建一个文档碎片，减少DOM渲染次数
-  let showList = GM_getValue("punk_setup_search").split('-');
+  let showList = webapp.getsave("punk_setup_search",'',true).split('-');
   for (let showListIndex = 0; showListIndex < showList.length; showListIndex++) {
     for (let index = 0; index < searchUrlMap.length; index++) {
       let item = searchUrlMap[index];
@@ -401,8 +401,8 @@ function injectStyle() {
   for (let index = 0; index < searchUrlMap.length; index++) {
     if (window.location.href.match(searchUrlMap[index].matchUrl) != null) {
       if (getKeywords() != null){
-        if (!GM_getValue("punk_setup_search")) {
-          GM_setValue("punk_setup_search", punkDeafultMark);
+        if (!webapp.getsave("punk_setup_search",'',true)) {
+          webapp.putsave("punk_setup_search", punkDeafultMark,true);
         }
         addSearchBox();
         addJumpSearchBox();
